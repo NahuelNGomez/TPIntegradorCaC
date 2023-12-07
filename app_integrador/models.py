@@ -11,3 +11,6 @@ class Libro(models.Model):
     precio = models.IntegerField(verbose_name='Precio')
     #stock = models.IntegerField()
     #imagen = models.ImageField(upload_to='libros', null=True, blank=True)
+
+    # def __str__(self):
+    #     return self.titulo

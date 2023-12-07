@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <h1>App Integrador</h1>
+        <h2>{% block section_title %} {% endblock %}</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Listar libros</a></li>
+                <li><a href="#">Crear un libro</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="#">Borrar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block mainContent %}
+        {% endblock %}
+    </main>
+    <footer>
+        FOOTER
+    </footer>
+
+</body>
+
+</html>
