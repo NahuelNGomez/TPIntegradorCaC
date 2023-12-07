@@ -1,5 +1,34 @@
 {% extends "app_integrador/base.html" %}
+{% load static %}
 {% block title %}App Integrador{% endblock %}
 {% block section_title %} Listado de libros {% endblock %}
-{% block extra_css %} {% endblock %}
-{% block mainContent %}{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app_integrador/css/libros_listado.css' %}">
+{% endblock %}
+{% block mainContent %}
+<section>
+    {% for libro in listado_libros %}
+    <article>
+        <div class="contenido">
+            <h3>{{libro.titulo}} - <span>[ {{libro.autor}} ]</span></h3>
+            <p>{{libro.editorial}}</p>
+            <p>{{libro.precio}}$</p>
+            <p class="genero">{{libro.genero}}</p>
+            <div class="acciones">
+                <a class="ver" href="{% url 'libro_detalle' pk=libro.id %}">Ver</a>
+                <a class="modificar" href="{% url 'libro_update' pk=libro.id %}">Modificar</a>
+                <a class="borrar" href="{% url 'libro_borrar' pk=libro.id %}">Borrar</a>
+            </div>
+        </div>
+
+
+    </article>
+
+    {% empty %}
+    <article>
+        No hay libros cargados en la página.
+    </article>
+    {% endfor %}
+
+</section>
+{% endblock %}

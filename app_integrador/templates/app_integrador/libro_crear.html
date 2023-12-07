@@ -1,0 +1,13 @@
+{% extends "app_integrador/base.html" %}
+{% load static %}
+{% block title %}App Integrador{% endblock %}
+{% block section_title %} Crear nuevo libro {% endblock %}
+{% block extra_css %} {% endblock %}
+{% block mainContent %}
+    <h3>Complete los campos</h3>
+    <form method="POST" action="{% url 'libro_crear' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear">
+    </form>
+{% endblock %}

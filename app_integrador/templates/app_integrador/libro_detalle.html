@@ -1,0 +1,20 @@
+{% extends "app_integrador/base.html" %}
+{% load static %}
+{% block title %}App Integrador{% endblock %}
+{% block section_title %} Detalle de tarea {% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app_integrador/css/libro_detalle.css' %}">
+{% endblock %}
+{% block mainContent %}
+<h3>Detalle</h3>
+<section>
+    <article>
+        <div class="contenido">
+            <h3>{{libro.titulo}} - <span>[ {{libro.autor}} ]</span></h3>
+            <p>{{libro.editorial}}</p>
+            <p>{{libro.precio}}$</p>
+            <p class="genero">{{libro.genero}}</p>
+        </div>
+    </article>
+
+{% endblock %}
