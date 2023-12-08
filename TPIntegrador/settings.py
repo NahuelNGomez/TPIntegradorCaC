@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'TPIntegrador.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "tpintegrador",
-        "USER": "postgres",
-        "PASSWORD": "1345",
-        "HOST": "127.0.0.1",
+        "NAME": "dbname_b46a",
+        "USER": "dbname_b46a_user",
+        "PASSWORD": "8p8buPUuqb7K8kdhpvxSSJsGrXSNC7G8",
+        "HOST": "dpg-clphvc1oh6hc73c3uqkg-a.oregon-postgres.render.com",
         "PORT": "5432",
     }
 }
