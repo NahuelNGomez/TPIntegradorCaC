@@ -3,14 +3,17 @@
 {% block title %}App Integrador{% endblock %}
 {% block section_title %} Detalle de tarea {% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'app_integrador/css/libro_modificar.css' %}">
+<link rel="stylesheet" href="{% static 'app_integrador/css/libros_crear.css' %}">
 {% endblock %}
 {% block mainContent %}
-<h3>Modificar una tarea</h3>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Update">
-</form>
+<div class="container">
+    <h3>Modificar una tarea</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+</div>
+
 
 {% endblock %}
