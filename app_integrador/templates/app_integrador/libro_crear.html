@@ -2,12 +2,17 @@
 {% load static %}
 {% block title %}App Integrador{% endblock %}
 {% block section_title %} Crear nuevo libro {% endblock %}
-{% block extra_css %} {% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app_integrador/css/libros_crear.css' %}">
+{% endblock %}
 {% block mainContent %}
+<div class="container">
     <h3>Complete los campos</h3>
     <form method="POST" action="{% url 'libro_crear' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Crear">
     </form>
+</div>
+    
 {% endblock %}

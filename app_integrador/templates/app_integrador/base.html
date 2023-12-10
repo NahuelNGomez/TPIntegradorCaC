@@ -11,24 +11,27 @@
 </head>
 
 <body>
+
     <header>
-        <h1>Administración de libros</h1>
-        <h2>{% block section_title %} {% endblock %}</h2>
+       
+        <!-- <h2>{% block section_title %} {% endblock %}</h2>-->
         <nav>
+            <h1> <a href="{% url 'index' %}">AdminBoo<span>K</span></a></h1>
             <ul>
-                <li><a href="{% url 'index' %}">Inicio</a></li>
                 <li><a href="{% url 'libros_listado' %}">Listar libros</a></li>
                 <li><a href="{% url 'libro_crear' %}">Crear un libro</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         {% block mainContent %}
         {% endblock %}
     </main>
-    <footer>
-        FOOTER
-    </footer>
+
+   <footer>
+    <h1> <a href="{% url 'index' %}">AdminBoo<span>K</span>@ todos los derechos reservados 2023</a></h1>
+   </footer>
 
 </body>
 
