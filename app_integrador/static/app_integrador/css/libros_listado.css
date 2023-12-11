@@ -21,7 +21,6 @@ article{
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
-    
 }
 
 .contenido:hover{
@@ -59,7 +58,7 @@ p{
 }
 
 .acciones a:hover{
-    color: red;
+    color: rgb(0, 188, 28);
     transform: scale(1.1); 
 
 }

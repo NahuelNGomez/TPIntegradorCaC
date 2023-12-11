@@ -3,14 +3,13 @@
 {% block title %}App Integrador{% endblock %}
 {% block section_title %} Detalle de tarea {% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'app_integrador/css/libro_detalle.css' %}">
+<link rel="stylesheet" href="{% static 'app_integrador/css/libros_detalle.css' %}">
 {% endblock %}
 {% block mainContent %}
-<h3>Detalle</h3>
-<section>
+    <h2>Detalle de "{{libro.titulo}}"</h2>
     <article>
         <div class="contenido">
-            <h3>{{libro.titulo}} - <span>[ {{libro.autor}} ]</span></h3>
+            <h3>{{libro.titulo}} - <span>( {{libro.autor}} )</span></h3>
             <p>{{libro.editorial}}</p>
             <p>{{libro.precio}}$</p>
             <p class="genero">{{libro.genero}}</p>

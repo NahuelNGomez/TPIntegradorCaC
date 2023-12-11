@@ -6,8 +6,8 @@
 <link rel="stylesheet" href="{% static 'app_integrador/css/libros_crear.css' %}">
 {% endblock %}
 {% block mainContent %}
+<h2>Modificar un libro</h2>
 <div class="container">
-    <h3>Modificar un Libro</h3>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}

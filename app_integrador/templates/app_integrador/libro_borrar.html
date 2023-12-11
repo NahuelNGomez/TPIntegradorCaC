@@ -3,16 +3,18 @@
 {% block title %}App Integrador{% endblock %}
 {% block section_title %} Borrado de libro {% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'app_integrador/css/libro_borrar.css' %}">
+<link rel="stylesheet" href="{% static 'app_integrador/css/libros_borrar.css' %}">
 {% endblock %}
 {% block mainContent %}
-<article>
-    <h3>Borrar Libro</h3>
-    <form method="post">
-        {% csrf_token %}
-        <p>Estás seguro de querer borrar: "<b>{{ object.titulo }}</b>"?</p>
-        {{ form }}
-        <input type="submit" value="Confirm">
-    </form>
-</article>
+<main>
+    <article>
+        <h3>Borrar Libro</h3>
+        <form method="post">
+            {% csrf_token %}
+            <p>Estás seguro de querer borrar: "<b>{{ object.titulo }}</b>"?</p>
+            {{ form }}
+            <input type="submit" value="BORRAR">
+        </form>
+    </article>
+</main>
 {% endblock %}
