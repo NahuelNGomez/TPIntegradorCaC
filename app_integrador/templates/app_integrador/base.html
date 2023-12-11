@@ -11,10 +11,7 @@
 </head>
 
 <body>
-
     <header>
-       
-        <!-- <h2>{% block section_title %} {% endblock %}</h2>-->
         <nav>
             <h1> <a href="{% url 'index' %}">AdminBoo<span>K</span></a></h1>
             <ul>
@@ -23,15 +20,14 @@
             </ul>
         </nav>
     </header>
-    
     <main>
         {% block mainContent %}
         {% endblock %}
     </main>
 
-   <footer>
-    <p> <a href="{% url 'index' %}">AdminBoo<span>K</span>@ todos los derechos reservados 2023</a></p>
-   </footer>
+    <footer>
+        <p> <a href="{% url 'index' %}">AdminBoo<span>K</span>@ todos los derechos reservados 2023</a></p>
+    </footer>
 
 </body>
 

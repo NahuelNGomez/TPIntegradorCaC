@@ -7,7 +7,6 @@ from django.urls import reverse, reverse_lazy
 def index(request):
     return render(request, 'app_integrador/index.html', {})
 
-
 class LibroListView(ListView):
     model = Libro
     context_object_name = 'listado_libros'

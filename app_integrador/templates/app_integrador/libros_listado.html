@@ -8,18 +8,18 @@
 {% block mainContent %}
 <section>
     {% for libro in listado_libros %}
-    
-        <div class="contenido">
-            <h3>{{libro.titulo}} - <span> {{libro.autor}} </span></h3>
-            <p>{{libro.editorial}}</p>
-            <p class="precio">{{libro.precio}} $</p>
-            <p class="genero">{{libro.genero}}</p>
-            <div class="acciones">
-                <a class="datos" href="{% url 'libro_detalle' pk=libro.id %}">Detalle</a>
-                <a class="modificar" href="{% url 'libro_update' pk=libro.id %}">Modificar</a>
-                <a class="borrar" href="{% url 'libro_borrar' pk=libro.id %}">Borrar</a>
-            </div>
+
+    <div class="contenido">
+        <h3>{{libro.titulo}} - <span> {{libro.autor}} </span></h3>
+        <p>{{libro.editorial}}</p>
+        <p class="precio">{{libro.precio}} $</p>
+        <p class="genero">{{libro.genero}}</p>
+        <div class="acciones">
+            <a class="datos" href="{% url 'libro_detalle' pk=libro.id %}">Detalle</a>
+            <a class="modificar" href="{% url 'libro_update' pk=libro.id %}">Modificar</a>
+            <a class="borrar" href="{% url 'libro_borrar' pk=libro.id %}">Borrar</a>
         </div>
+    </div>
 
 
     {% empty %}
